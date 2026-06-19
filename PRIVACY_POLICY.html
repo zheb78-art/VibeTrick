@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy — VibeTrick</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0a0a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 800;
+            background: linear-gradient(90deg, #a855f7, #06b6d4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: 700;
+            color: #a855f7;
+            margin-top: 40px;
+            margin-bottom: 16px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+        }
+        h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-top: 28px;
+            margin-bottom: 10px;
+        }
+        h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #06b6d4;
+            margin-top: 20px;
+            margin-bottom: 8px;
+        }
+        p { margin-bottom: 14px; font-size: 15px; }
+        .update-date {
+            font-size: 13px;
+            color: #888;
+            margin-bottom: 30px;
+        }
+        .lang-switch {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 30px;
+        }
+        .lang-switch a {
+            padding: 8px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .lang-switch a.active {
+            background: linear-gradient(90deg, #a855f7, #06b6d4);
+            color: #fff;
+        }
+        .lang-switch a:not(.active) {
+            background: #1a1a1a;
+            color: #888;
+            border: 1px solid #333;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        ul {
+            margin: 10px 0 14px 20px;
+            font-size: 15px;
+        }
+        li { margin-bottom: 6px; }
+        strong { color: #ffffff; }
+        a { color: #06b6d4; }
+        .highlight-box {
+            background: #1a1a2e;
+            border-left: 3px solid #a855f7;
+            padding: 14px 18px;
+            border-radius: 0 10px 10px 0;
+            margin: 16px 0;
+            font-size: 14px;
+        }
+        .footer {
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+    <script>
+        function switchLang(lang) {
+            document.querySelectorAll('.lang-section').forEach(el => el.classList.remove('active'));
+            document.querySelectorAll('.lang-switch a').forEach(el => el.classList.remove('active'));
+            document.getElementById('lang-' + lang).classList.add('active');
+            document.querySelector('[data-lang="' + lang + '"]').classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+<h1>Privacy Policy</h1>
+<p class="update-date">Ultimo aggiornamento / Last updated: 19 giugno 2026</p>
+
+<div class="lang-switch">
+    <a href="javascript:switchLang('it')" class="active" data-lang="it">Italiano</a>
+    <a href="javascript:switchLang('en')" data-lang="en">English</a>
+</div>
+
+<!-- ITALIANO -->
+<div id="lang-it" class="lang-section active">
+
+<h3>1. Introduzione</h3>
+<p>VibeTrick ("l'App") &egrave; sviluppata da uno sviluppatore indipendente ("noi", "ci"). La presente Privacy Policy descrive come raccogliamo, utilizziamo e proteggiamo le informazioni degli utenti. La tua privacy &egrave; importante per noi: VibeTrick <strong>non vende, non condivide e non trasferisce</strong> i tuoi dati personali a terze parti a scopo pubblicitario o di profilazione.</p>
+
+<h3>2. Dati raccolti e finalit&agrave;</h3>
+
+<h4>2.1 Dati sull'umore (Mood Check-in)</h4>
+<ul>
+    <li><strong>Cosa:</strong> Valutazione dell'umore (da 1 a 5), data e ora del check-in.</li>
+    <li><strong>Perch&eacute;:</strong> Per fornirti analisi personalizzate, insights, sfide e statistiche sui tuoi pattern emotivi.</li>
+    <li><strong>Dove:</strong> Salvati localmente sul dispositivo (SwiftData) e, se attivato, nel tuo database iCloud privato tramite CloudKit.</li>
+</ul>
+
+<h4>2.2 Posizione</h4>
+<ul>
+    <li><strong>Cosa:</strong> Coordinate geografiche approssimative (precisione al km).</li>
+    <li><strong>Perch&eacute;:</strong> Esclusivamente per ottenere i dati meteo locali tramite l'API Open-Meteo.</li>
+    <li><strong>Dove:</strong> Le coordinate vengono inviate a <a href="https://open-meteo.com" target="_blank">Open-Meteo</a> per ricevere temperatura e condizioni meteo attuali. Non memorizziamo le tue coordinate. La posizione non viene mai condivisa con altri servizi.</li>
+</ul>
+
+<h4>2.3 Dati di salute (HealthKit)</h4>
+<ul>
+    <li><strong>Cosa:</strong> Conteggio passi giornalieri (sola lettura).</li>
+    <li><strong>Perch&eacute;:</strong> Per correlare l'attivit&agrave; fisica con i tuoi pattern emotivi e offrirti insights personalizzati.</li>
+    <li><strong>Dove:</strong> I dati dei passi vengono letti da HealthKit e salvati localmente insieme ai log giornalieri. Non scriviamo mai dati su HealthKit. I dati di salute non vengono mai inviati a server esterni.</li>
+</ul>
+
+<h4>2.4 Apple Music</h4>
+<ul>
+    <li><strong>Cosa:</strong> Accesso al catalogo Apple Music per cercare brani.</li>
+    <li><strong>Perch&eacute;:</strong> Per suggerirti musica in base al tuo umore e alle condizioni meteo.</li>
+    <li><strong>Dove:</strong> Le ricerche avvengono tramite l'API MusicKit di Apple. Non accediamo alla tua libreria personale n&eacute; ai tuoi dati di ascolto.</li>
+</ul>
+
+<h4>2.5 Notifiche</h4>
+<ul>
+    <li><strong>Cosa:</strong> Notifiche locali programmate.</li>
+    <li><strong>Perch&eacute;:</strong> Per inviarti promemoria serali per registrare il tuo mood.</li>
+    <li><strong>Dove:</strong> Le notifiche sono gestite interamente sul dispositivo. Non utilizziamo notifiche push remote.</li>
+</ul>
+
+<h4>2.6 iCloud (CloudKit)</h4>
+<ul>
+    <li><strong>Cosa:</strong> Backup crittografato dei tuoi log dell'umore.</li>
+    <li><strong>Perch&eacute;:</strong> Per permetterti di recuperare i tuoi dati se cambi dispositivo.</li>
+    <li><strong>Dove:</strong> I dati vengono salvati nel tuo database CloudKit privato, accessibile solo a te tramite il tuo account Apple. Noi non abbiamo accesso a questi dati.</li>
+</ul>
+
+<h4>2.7 Acquisti in-app (StoreKit)</h4>
+<ul>
+    <li><strong>Cosa:</strong> Informazioni sugli acquisti (abbonamento Pro, pacchetti emoji).</li>
+    <li><strong>Perch&eacute;:</strong> Per verificare lo stato dei tuoi acquisti e sbloccare le funzionalit&agrave; premium.</li>
+    <li><strong>Dove:</strong> Gli acquisti sono gestiti interamente da Apple tramite StoreKit. Non raccogliamo n&eacute; memorizziamo informazioni di pagamento.</li>
+</ul>
+
+<h3>3. Dati NON raccolti</h3>
+<div class="highlight-box">
+    VibeTrick <strong>non</strong> raccoglie: nome, email o qualsiasi dato identificativo personale; dati di analytics o telemetria; identificatori pubblicitari (IDFA); dati di navigazione o utilizzo per profilazione; cookie di terze parti.
+</div>
+
+<h3>4. Condivisione con terze parti</h3>
+<p>I tuoi dati non vengono mai venduti, condivisi o trasferiti a terze parti, ad eccezione di:</p>
+<ul>
+    <li><strong>Open-Meteo API:</strong> Riceviamo dati meteo inviando coordinate geografiche anonime. Open-Meteo &egrave; un servizio open-source che non traccia gli utenti (<a href="https://open-meteo.com/en/terms" target="_blank">termini</a>).</li>
+    <li><strong>Apple:</strong> Gestisce iCloud (CloudKit), HealthKit, MusicKit e StoreKit secondo la propria <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Policy</a>.</li>
+</ul>
+
+<h3>5. Conservazione dei dati</h3>
+<ul>
+    <li>I dati dell'umore vengono conservati sul tuo dispositivo fino a quando non elimini l'app o li cancelli manualmente.</li>
+    <li>Il backup iCloud viene conservato fino a quando non elimini i dati dal tuo account iCloud.</li>
+    <li>Noi non conserviamo alcun dato su server propri.</li>
+</ul>
+
+<h3>6. Sicurezza</h3>
+<ul>
+    <li>Tutti i dati locali sono protetti dalla crittografia del dispositivo iOS.</li>
+    <li>I dati su iCloud sono crittografati da Apple in transito e a riposo.</li>
+    <li>Non utilizziamo server di terze parti per l'archiviazione dei dati.</li>
+</ul>
+
+<h3>7. Diritti dell'utente</h3>
+<p>Puoi in qualsiasi momento:</p>
+<ul>
+    <li>Revocare i permessi (posizione, HealthKit, Apple Music, notifiche) dalle Impostazioni di iOS.</li>
+    <li>Eliminare tutti i dati locali disinstallando l'app.</li>
+    <li>Eliminare il backup iCloud dalle impostazioni di iCloud del tuo dispositivo.</li>
+</ul>
+
+<h3>8. Minori</h3>
+<p>VibeTrick non &egrave; destinata a minori di 13 anni e non raccoglie consapevolmente dati da minori. Se sei un genitore e ritieni che tuo figlio abbia fornito dati personali, contattaci.</p>
+
+<h3>9. Modifiche alla Privacy Policy</h3>
+<p>Ci riserviamo il diritto di aggiornare questa Privacy Policy. Le modifiche verranno pubblicate su questa pagina con la data di aggiornamento.</p>
+
+<h3>10. Contatti</h3>
+<p>Per domande sulla presente Privacy Policy: <strong>vibetrickapp@gmail.com</strong></p>
+
+</div>
+
+<!-- ENGLISH -->
+<div id="lang-en" class="lang-section">
+
+<h3>1. Introduction</h3>
+<p>VibeTrick ("the App") is developed by an independent developer ("we", "us"). This Privacy Policy describes how we collect, use, and protect user information. Your privacy matters to us: VibeTrick <strong>does not sell, share, or transfer</strong> your personal data to third parties for advertising or profiling purposes.</p>
+
+<h3>2. Data collected and purposes</h3>
+
+<h4>2.1 Mood data (Mood Check-in)</h4>
+<ul>
+    <li><strong>What:</strong> Mood rating (1 to 5), date and time of check-in.</li>
+    <li><strong>Why:</strong> To provide you with personalized analysis, insights, challenges, and statistics about your emotional patterns.</li>
+    <li><strong>Where:</strong> Stored locally on the device (SwiftData) and, if enabled, in your private iCloud database via CloudKit.</li>
+</ul>
+
+<h4>2.2 Location</h4>
+<ul>
+    <li><strong>What:</strong> Approximate geographic coordinates (kilometer accuracy).</li>
+    <li><strong>Why:</strong> Solely to obtain local weather data through the Open-Meteo API.</li>
+    <li><strong>Where:</strong> Coordinates are sent to <a href="https://open-meteo.com" target="_blank">Open-Meteo</a> to receive current temperature and weather conditions. We do not store your coordinates. Your location is never shared with other services.</li>
+</ul>
+
+<h4>2.3 Health data (HealthKit)</h4>
+<ul>
+    <li><strong>What:</strong> Daily step count (read-only).</li>
+    <li><strong>Why:</strong> To correlate physical activity with your emotional patterns and offer personalized insights.</li>
+    <li><strong>Where:</strong> Step data is read from HealthKit and stored locally with daily logs. We never write data to HealthKit. Health data is never sent to external servers.</li>
+</ul>
+
+<h4>2.4 Apple Music</h4>
+<ul>
+    <li><strong>What:</strong> Access to the Apple Music catalog to search for songs.</li>
+    <li><strong>Why:</strong> To suggest music based on your mood and weather conditions.</li>
+    <li><strong>Where:</strong> Searches are performed through Apple's MusicKit API. We do not access your personal library or listening data.</li>
+</ul>
+
+<h4>2.5 Notifications</h4>
+<ul>
+    <li><strong>What:</strong> Scheduled local notifications.</li>
+    <li><strong>Why:</strong> To send you evening reminders to log your mood.</li>
+    <li><strong>Where:</strong> Notifications are managed entirely on the device. We do not use remote push notifications.</li>
+</ul>
+
+<h4>2.6 iCloud (CloudKit)</h4>
+<ul>
+    <li><strong>What:</strong> Encrypted backup of your mood logs.</li>
+    <li><strong>Why:</strong> To allow you to recover your data when switching devices.</li>
+    <li><strong>Where:</strong> Data is stored in your private CloudKit database, accessible only to you through your Apple account. We do not have access to this data.</li>
+</ul>
+
+<h4>2.7 In-app purchases (StoreKit)</h4>
+<ul>
+    <li><strong>What:</strong> Purchase information (Pro subscription, emoji packs).</li>
+    <li><strong>Why:</strong> To verify your purchase status and unlock premium features.</li>
+    <li><strong>Where:</strong> Purchases are managed entirely by Apple through StoreKit. We do not collect or store payment information.</li>
+</ul>
+
+<h3>3. Data NOT collected</h3>
+<div class="highlight-box">
+    VibeTrick does <strong>not</strong> collect: name, email, or any personally identifiable information; analytics or telemetry data; advertising identifiers (IDFA); browsing or usage data for profiling; third-party cookies.
+</div>
+
+<h3>4. Third-party sharing</h3>
+<p>Your data is never sold, shared, or transferred to third parties, except for:</p>
+<ul>
+    <li><strong>Open-Meteo API:</strong> We receive weather data by sending anonymous geographic coordinates. Open-Meteo is an open-source service that does not track users (<a href="https://open-meteo.com/en/terms" target="_blank">terms</a>).</li>
+    <li><strong>Apple:</strong> Manages iCloud (CloudKit), HealthKit, MusicKit, and StoreKit according to their own <a href="https://www.apple.com/legal/privacy/" target="_blank">Privacy Policy</a>.</li>
+</ul>
+
+<h3>5. Data retention</h3>
+<ul>
+    <li>Mood data is stored on your device until you delete the app or manually erase it.</li>
+    <li>iCloud backups are retained until you delete data from your iCloud account.</li>
+    <li>We do not store any data on our own servers.</li>
+</ul>
+
+<h3>6. Security</h3>
+<ul>
+    <li>All local data is protected by iOS device encryption.</li>
+    <li>iCloud data is encrypted by Apple in transit and at rest.</li>
+    <li>We do not use third-party servers for data storage.</li>
+</ul>
+
+<h3>7. User rights</h3>
+<p>You can at any time:</p>
+<ul>
+    <li>Revoke permissions (location, HealthKit, Apple Music, notifications) from iOS Settings.</li>
+    <li>Delete all local data by uninstalling the app.</li>
+    <li>Delete iCloud backups from your device's iCloud settings.</li>
+</ul>
+
+<h3>8. Children</h3>
+<p>VibeTrick is not intended for children under 13 and does not knowingly collect data from minors. If you are a parent and believe your child has provided personal data, please contact us.</p>
+
+<h3>9. Changes to this Privacy Policy</h3>
+<p>We reserve the right to update this Privacy Policy. Changes will be posted on this page with the updated date.</p>
+
+<h3>10. Contact</h3>
+<p>For questions about this Privacy Policy: <strong>vibetrickapp@gmail.com</strong></p>
+
+</div>
+
+<div class="footer">
+    <p>&copy; 2026 VibeTrick. All rights reserved.</p>
+</div>
+
+</body>
+</html>
